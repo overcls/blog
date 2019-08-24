@@ -1,14 +1,11 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/overcls/blog/api"
+	"github.com/overcls/blog/router"
 )
 
 func main() {
-	r:=gin.Default()
 
-
-	r.GET("/",api.IndexController)
+	r :=router.InitRouter()
 	_ = r.Run(":3000")
 }
